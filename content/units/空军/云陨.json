@@ -9,13 +9,6 @@
     "drag": 0.1,
     "accel": 0.4,
     "trailLength": 5,
-    "trail": {  // 尾迹特效配置（若仍有警告可暂时删除）
-        "type": "ParticleEffect",
-        "length": 5,
-        "size": 2,
-        "color": "DDA0DD80",
-        "particles": 8
-    },
     "targetAir": true,
     "targetGround": true,
     "circleTarget": true,
