@@ -1,0 +1,14 @@
+{
+    "type": "floor",                
+    "name": "高温地面",              // 显示名称（支持中文）
+    "description": "温度较高的地面，会略微降低移动速度但能抵抗部分油污和水渍", // 增加描述信息
+    "speedMultiplier": 0.8,         
+    "dragMultiplier": 1.25,         
+    "attributes": {                 
+        "oil": -0.2,             
+        "water": -0.2            
+    },
+    "blendGroup": "stone",          // 使用游戏内置的石头混合组，避免找不到的错误
+    "variants": 0,                  // 0表示使用单一贴图
+    "texture": "高温地板"  // 贴图文件名改为英文+下划线（推荐命名规范）
+}

@@ -1,0 +1,29 @@
+{
+    "name": "制动抽水塔",
+    "description": "依旧是你的感染姐姐在写代码，名称已经写清楚了这是一个能而且不需要电就能在水边抽水的抽水机",
+    "type": "SolidPump",
+    "health": 1000,
+    "researchCostMultiplier": 0.1
+    "size": 2,
+    "floating": true,
+    "hasPower": false,
+    "hasLiquids": true,
+    "liquidCapacity": 10,
+    "requirements": [
+        {
+            "item": "lead",
+            "amount": 25
+        },
+        {
+            "item": "遗湿矿",
+            "amount": 25
+        }
+    ],
+    "pumpAmount": 0.10,
+    "rotateSpeed": 1,
+    "result": "water",
+    "baseEfficiency": 1,
+    "attribute": "water",
+    "category": "production",
+    "research": "压力管道"
+}

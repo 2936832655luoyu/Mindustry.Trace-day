@@ -1,0 +1,79 @@
+{
+    // 设施名称：增强力墙场
+    "name": "痕迹力墙",
+    // 设施描述：生成一面墙力墙场
+    "description": "生成一面墙力墙[准备开学，到时候模组就不更新了，所以马上肝出来]",
+    // 设施类型：力场投射器（ForceProjector）
+    "type": "ForceProjector",
+    // 设施自身生命值：2500点
+    "researchCostMultiplier": 0.2
+    "health": 2500,
+    // 设施体积大小：3x3格子
+    "size": 2,
+    // 力场有效半径：360单位
+    "radius": 120,
+    // 相位模式启用时间：150单位时间
+    "phaseUseTime": 150,
+    // 相位模式下半径提升比例：30%
+    "phaseRadiusBoost": 0.3,
+    // 基础电力消耗：8.0单位
+    "basePowerDraw": 8.0,
+    // 物品储存容量：20单位
+    "itemCapacity": 30,
+    // 液体储存容量：300单位
+    "liquidCapacity": 300,
+    // 护盾基础生命值：9000点
+    "shieldHealth": 600,
+    // 常规模式下的冷却时间：4单位时间
+    "cooldownNormal": 4,
+    // 液体助推模式下的冷却时间：9单位时间
+    "cooldownLiquid": 9,
+    // 基础损坏状态下的冷却时间：4单位时间
+    "cooldownBrokenBase": 4,
+    // 相位模式下护盾增强值：1000点
+    "phaseShieldBoost": 2000,
+    // 资源消耗配置
+    "consumes": {
+        // 基础电力消耗：13单位/时间
+        "power": 13,
+        // 物品消耗配置
+        "items": {
+            // 消耗的物品列表
+            "items": [
+                {
+                    "item": "精制火钢",  // 相位织物
+                    "amount": 1              // 每次消耗1个
+                }
+            ],
+            "booster": true,   // 作为增强剂使用
+            "optional": true   // 可选消耗（不是必须的）
+        }
+    },
+    // 建造所需材料
+    "requirements": [
+        {
+            "item": "压缩铜",
+            "amount": 600
+        },
+        {
+            "item": "lead",        // 铅
+            "amount": 400
+        },
+        {
+            "item": "silicon",     // 硅
+            "amount": 400
+        },
+        {
+            "item": "copper",    // 钛
+            "amount": 350
+        },
+        {
+            "item": "遗湿矿",  // 塑料合金
+            "amount": 350
+        }
+    ],
+    // 所属类别：效果类设施（提供护盾效果）
+    "category": "effect",
+    // 解锁所需研究：力场投射器研究项目
+    "research": "针驱超速"
+}

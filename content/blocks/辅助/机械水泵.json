@@ -1,0 +1,50 @@
+{
+    "type": "Pump",  // 定义该建筑类型为泵类设备
+    "name": "机械水泵",  // 建筑显示名称，已改为水泵
+    "researchCostMultiplier": 0.02
+    "description": "泵送液体，不需要电力.[地图组千盼万盼的水泵终于写出来了]",  // 功能描述，保持通用液体泵送说明
+    "size": 2,  // 建筑占用尺寸为2x2格
+    "health": 500,  // 建筑生命值为120
+    "liquidCapacity": 20,  // 液体存储容量为20单位
+    "hasLiquids": true,  // 允许存储液体
+    "pumpAmount": 0.15,  // 每秒泵送量为0.15单位
+    "useTime": 0.10,  // 泵送动作间隔时间（秒）
+    "requirements": [  // 建造所需材料
+        {
+            "item": "压缩铜",
+            "amount": 20  // 需要20个铜
+        },
+        {
+            "item": "遗湿矿",
+            "amount": 15  // 需要15个钛
+        },
+        {
+            "item": "压缩铅",
+            "amount": 10  // 需要10个元玻璃
+        }
+    ],
+    "category": "liquid",  // 归类到液体处理设施类别
+    "research": "制动抽水塔",  // 解锁所需的前置研究
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [
+            {
+                "type": "drawRegion",
+                "suffix": "-bottom"
+            },
+            "DrawDefault",
+            {
+                "type": "DrawLiquidRegion",
+                "drawLiquid": "water",
+                "suffix": "-liquid"
+            },
+            {
+                "type": "DrawRegion",
+                "suffix": "-转",
+                "spinSprite": true,
+                "rotateSpeed": -1
+            }
+        ]
+    }
+    
+}

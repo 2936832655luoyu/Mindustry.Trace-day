@@ -1,0 +1,113 @@
+{
+  "planets": [
+    {
+      // 星球核心配置（必填项）
+      "name": "共迹星",  // 星球内部标识（建议简短，用于代码引用）
+      "id": "gongji-star",  // 全局唯一ID（模组内不可重复，建议英文小写+下划线，用于关联区域/科技树）
+      "parent": "sun",  // 父天体（围绕太阳运行，固定值为"sun"）
+      "orbitPosition": 1,  // 轨道位置索引（决定在星系图中的排列顺序，1=离太阳较近）
+      "size": 3.3,  // 星球视觉大小（数值越大星球在星系图中显示越大，碰撞体积同步增加）
+      
+      // 星球地表网格配置（影响地表地形细节）
+      "mesh": {
+        "type": "multiMesh",  // 网格类型：多网格组合（支持叠加多个子网格）
+        "meshes": [
+          {
+            "type": "hexMesh",  // 子网格类型：六边形网格（Mindustry标准地表网格）
+            "divisions": 8  // 网格细分程度（数值越大，地表纹理越精细，性能消耗略高，建议5-10）
+          }
+        ]
+      },
+      
+      // 星球云层网格配置（视觉效果）
+      "cloudMesh": {
+        "type": "multiMesh",  // 云层网格类型：多网格组合（增强云层层次感）
+        "meshes": [
+          {
+            "type": "hexSkyMesh",  // 子网格类型：六边形天空网格（专用云层网格）
+            "divisions": 2,  // 云层细分度（2-5为宜，过高无明显效果）
+            "scale": 0.15,  // 云层缩放比例（控制云层覆盖范围）
+            "amplitude": 0.14,  // 云层起伏幅度（数值越大，云层越不规则，0.1-0.3为宜）
+            "octaves": 5,  // 噪声 octave 数量（影响云层复杂度，3-5为宜）
+            "color": "ADD8E680",  // 云层颜色（RGBA格式，此处为半透明淡蓝）
+            "layers": 2,  // 云层层数（1-3层，多层增强立体感）
+            "layerScale": 0.42,  // 层缩放比例（控制每层云层大小差异）
+            "noiseScale": 1,  // 噪声纹理缩放（影响云层纹理大小）
+            "alpha": 0.43  // 云层整体透明度（0-1，数值越低越透明）
+          },
+          {
+            // 第二层云层（增强视觉层次）
+            "type": "hexSkyMesh",
+            "divisions": 3,
+            "scale": 0.6,
+            "amplitude": 0.15,
+            "octaves": 5,
+            "color": "ADD8E6FF",  // 不透明淡蓝（增强云层边缘清晰度）
+            "layers": 2,
+            "layerScale": 0.42,
+            "noiseScale": 1.2,
+            "alpha": 0.45
+          }
+        ]
+      },
+      
+      // 星球生成器（决定地形、资源分布逻辑）
+      "generator": "serpulo",  // 沿用Serpulo星球的生成规则（地形风格、资源分布与Serpulo一致）
+      
+      // 星球状态与显示设置
+      "visible": true,  // 是否在星系图中显示（true=可见，false=需解锁后显示）
+      "accessible": true,  // 是否允许玩家访问（true=可进入，false=封锁）
+      "alwaysUnlocked": true,  // 是否默认解锁（true=无需研究直接可见，false=需科技解锁）
+      "clearSectorOnLose": true,  // 区域失败后是否重置进度（true=重置，false=保留建筑/资源）
+      "tidalLock": false,  // 是否潮汐锁定（true=一面始终朝向太阳，导致昼夜固定；false=正常自转）
+      "localizedName": "共迹星",  // 游戏内显示的星球名称（中文）
+      "prebuildBase": false,  // 是否预设初始基地（true=进入时有基础建筑，false=从零开始）
+      "bloom": false,  // 是否启用发光效果（true=增强高光，适合发光星球；false=普通效果）
+      "startSector": 1,  // 初始解锁的区域编号（玩家首次进入星球时开放的区域）
+      
+      // 轨道与自转参数
+      "orbitRadius": 85,  // 轨道半径（距离太阳的距离，数值越大轨道越远）
+      "orbitTime": 10800,  // 公转周期（秒，180*60=10800，数值越大公转越慢）
+      "rotateTime": 5400,  // 自转周期（秒，90*60=5400，数值越大昼夜交替越慢）
+      
+      // 大气层配置（视觉效果）
+      "atmosphereRadIn": 0.02,  // 大气层内半径（相对于星球半径的比例，控制内层大气范围）
+      "atmosphereRadOut": 0.3,  // 大气层外半径（控制大气厚度，数值越大大气范围越广）
+      "atmosphereColor": "ADD8E680",  // 大气层颜色（半透明淡蓝，RGBA格式）
+      "lightColor": "ADD8E680",  // 星球光照颜色（影响地表色调，与大气颜色呼应）
+      "iconColor": "ADD8E6",  // 星系图中星球图标的颜色（不透明淡蓝）
+      
+      // 资源生成控制（隐藏不需要的资源）
+      "hiddenItems": {
+        "add": ["erekir-coal", "erekir-iron"],  // 隐藏Erekir专属资源（具体物品ID列表，而非物品组）
+        "remove": ["serpulo-copper", "serpulo-lead"]  // 强制显示Serpulo资源（移除隐藏列表）
+        // 注意：原"erekirItems"是物品组名称，需替换为具体物品ID，否则可能不生效
+      }
+    }
+  ],
+  "sectorPresets": [  // 区域预设（星球上的具体地图）
+    {
+      "name": "预建区",  // 区域内部标识
+      "id": "gongji-prebuilt-sector",  // 区域唯一ID（用于科技树依赖、进度保存）
+      "planet": "gongji-star",  // 所属星球ID（必须与上方星球的"id"一致，否则关联失败）
+      "sectorNumber": 12,  // 区域编号（在星球上的位置索引，决定地图在星球上的分布）
+      "description": "我们来到了这个星球，准备在这里开发[blue]一号基地",  // 游戏内显示的区域描述
+      "difficulty": 2,  // 难度等级（1-10，影响敌人强度、资源密度，2=低难度）
+      "alwaysUnlocked": true,  // 是否默认解锁（true=无需条件直接进入，与科技树配置冲突时以科技树为准）
+      "addStartingItems": true,  // 进入时是否赠送初始资源（true=赠送基础物品，如铜、铅）
+      "captureWave": 0,  // 占领所需防守波次（0=无需防守直接占领，>0=需击败对应波次敌人）
+      "localizedName": "预建区",  // 区域显示名称（中文）
+      
+      // 区域解锁条件（科技树配置）
+      "research": {
+        "parent": "zhaore-tech",  // 前置科技ID（必须在科技树中存在，如"燥热"科技的ID）
+        "objectives": [  // 解锁目标（完成后才能解锁该区域）
+          {
+            "type": "sectorComplete",  // 目标类型：完成指定区域
+            "sector": "canyon-entrance"  // 需完成的区域ID（替换为"峡谷[准入口]"的实际ID，确保存在）
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+    "type": "ItemTurret",
+    "researchCostMultiplier": 0.1
+    "name": "燃殿",
+    "description": "代码中邪了，制作已经红温，你就不要计较这个介绍了，反正是前中期的就对了（对了，这个炮台有非常大的后摇）",
+    "health": 2460,
+    "size": 2,
+    "reload": 250,
+    "range": 190,
+    "maxAmmo": 48,
+    "recoilTime": 30,
+    "recoil": 4,
+    "shoot": {
+        "shots": 2,
+        "shotDelay": 5
+    },
+    "ammoPerShot": 6,
+    "shootSound": "shotgun",
+    "targetGround": true,
+    "targetAir": true,
+    "inaccuracy": 1,
+    "shake": 5,
+    "shootCone": 20,
+    "ammoTypes": {
+        "遗湿矿": {
+            "type": "ShrapnelBulletType",
+            "reloadMultiplier": 2,
+            "speed": 12,
+            "lifetime": 15.8,
+            "length": 190,
+            "damage": 1040,
+            "width": 20,
+            "fromColor": "660000",
+            "toColor": "FF0000",
+            "ammoMultiplier": 1,
+            "pierce": true,
+            "shootEffect": {
+                "type": "ParticleEffect",
+                "particles": 9,
+                "sizeFrom": 9,
+                "sizeTo": 0,
+                "line": true,
+                "length": 36,
+                "baseLength": 0,
+                "lifetime": 15,
+                "colorFrom": "3333FF",
+                "colorTo": "33FFFF",
+                "cone": 60
+            }
+        },
+        "伸金": {
+            "type": "ShrapnelBulletType",
+            "reloadMultiplier": 2.31,
+            "speed": 15,
+            "lifetime": 12.7,
+            "length": 190,
+            "damage": 1740,
+            "width": 20,
+            "fromColor": "FFFFCC",
+            "toColor": "FFFF00",
+            "ammoMultiplier": 2,
+            "pierce": true,
+            "shootEffect": {
+                "type": "ParticleEffect",
+                "particles": 15,
+                "sizeFrom": 6,
+                "sizeTo": 0,
+                "line": true,
+                "length": 59,
+                "baseLength": 0,
+                "lifetime": 15,
+                "colorFrom": "99FFFF",
+                "colorTo": "FF0000",
+                "cone": 60
+            }
+        },
+        "压缩铜": {
+            "type": "ShrapnelBulletType",
+            "reloadMultiplier": 1,
+            "speed": 10,
+            "lifetime": 19,
+            "length": 190,
+            "damage": 740,
+            "width": 20,
+            "fromColor": "FFFFCC",
+            "toColor": "00fd6a",
+            "ammoMultiplier": 2,
+            "pierce": true,
+            "shootEffect": {
+                "type": "ParticleEffect",
+                "particles": 15,
+                "sizeFrom": 6,
+                "sizeTo": 0,
+                "line": true,
+                "length": 40,
+                "baseLength": 0,
+                "lifetime": 15,
+                "colorFrom": "99FFFF",
+                "colorTo": "FF0000",
+                "cone": 90
+            }
+        }
+    },
+    "rotateSpeed": 10,
+    "requirements": [
+        {"item": "伸金", "amount": 10},
+        {"item": "silicon", "amount": 300},
+        {"item": "遗湿矿", "amount": 300},
+        {"item": "压缩铜", "amount": 250}
+    ],
+    "category": "turret",
+    "research": "川流"
+}

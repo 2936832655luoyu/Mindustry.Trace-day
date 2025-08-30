@@ -1,0 +1,72 @@
+{
+  // 单位类型定义 - T2陆军单位
+  "type": "mech",
+  "name": "重金", // 单位内部ID
+  
+  // 基础属性
+  "health": 1800, // 较高生命值，体现"重"的特点
+  "armor": 5, // 较高护甲
+  "speed": 0.6, // 较慢移动速度，体现重型单位特性
+  "flying": false, // 陆军单位
+  "hover": false, // 非悬浮单位
+  // 是否始终解锁（true = 无需研究即可使用）
+    "alwaysUnlocked": true,
+  "research": "轻钢",  // 解锁该单位所需的研究项目
+  // 单位尺寸和碰撞
+  "hitSize": 15, // 较大的碰撞体积
+  
+  // 物品容量
+  "itemCapacity": 30, // 中等物品容量
+  
+  // 武器系统配置
+    // 武器系统
+    "weapons": [
+        {
+            // 武器配置
+            "top": false, // 武器图层位置（false=底层，true=顶层）- 注意：此字段在标准JSON中可能无效
+            "name": "重金-机枪", // 武器名称
+            "reload": 5, // 装填时间（帧/发）
+            "x": -4, // 武器相对单位中心的X偏移（像素=1:4，即-4表示向左偏移16像素）
+            "y": 0.75, // 武器相对单位中心的Y偏移（向上偏移3像素）
+            "ejectEffect": "casing1", // 抛壳特效
+            
+"bullet": {
+    "type": "BasicBulletType",
+    "damage": 35,
+    "speed": 6,
+    "width": 7,
+    "height": 12,
+    "lifetime": 35,
+    "shootEffect": "shootSmall",
+    "smokeEffect": "shootSmallSmoke",
+    "ammoMultiplier": 1.5,
+    "color": "FF5733FF", // 基础颜色
+    " ParticleEmitter": [ // 添加粒子效果
+        {
+            "particle": "spark",
+            "colormultiplier": "255, 87, 51, 255", // RGB橙红色
+            "particleamount": 2,
+            "velocitymin": 0.5,
+            "velocitymax": 1.0
+        }
+    ]
+}
+        }
+    ],
+  
+  // 特殊能力：护盾系统
+  // ===== 维修领域能力配置 =====
+  "abilities": [
+    {
+      "type": "RepairFieldAbility",  // 能力类型：维修领域能力（自动修复周围友方单位）
+      "range": 30,                   // 作用范围：30格（以该单位为中心的圆形区域）
+      "amount": 40,                  // 修复量：每秒恢复40点生命值（总计，不是每个单位）
+      "reload": 120,                 // 作用间隔：每120帧（2秒）触发一次修复效果<
+    }
+  ]
+  
+  // 单位引擎效果
+  "engineOffset": 7.5, // 引擎位置偏移
+  "engineSize": 3.2, // 引擎大小
+  
+}

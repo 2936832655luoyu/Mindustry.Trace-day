@@ -1,0 +1,79 @@
+{
+    // 建筑类型：质量驱动器（用于远距离传输物品）
+    "type": "MassDriver",
+    // 建筑名称：浪通质量驱动器
+    "name": "痕迹质驱",
+    // 建筑描述：说明其功能和特性
+    "description": "知道质驱怎么用吗？，这就是质驱了，就用质驱的方式用它。[求赞助？？？]",
+    // 建筑尺寸：5x5格子大小
+    "size": 3,
+    "researchCostMultiplier": 0.2
+    // 建筑生命值：1200点
+    "health": 1200,
+    // 是否需要电力：是
+    "hasPower": true,
+    // 是否有液体槽：否
+    "hasLiquids": false,
+    // 是否有物品槽：是
+    "hasItems": true,
+    // 物品最大容量：2000个单位
+    "itemCapacity": 1000,
+    // 传输有效范围：1000单位距离
+    "range": 1300,
+    // 物品装载速度：5单位/时间
+    "speed": 10,
+    // 发射间隔时间：240单位时间
+    "reloadTime": 100,
+    // 旋转速度：2单位/时间（用于瞄准目标驱动器）
+    "rotateSpeed": 4,
+    // 发射时的震动强度：4
+    "shake": 6,
+    // 发射时的特效：大型射击效果
+    "shootEffect": "shootBig",
+    // 发射时的烟雾特效：小型射击烟雾
+    "smokeEffect": "shootSmallSmoke",
+    // 接收物品时的特效：熔炼烟雾效果
+    "recieveEffect": "smeltsmoke",
+    // 发射高度：30单位
+    "shootY": 30,
+    // 资源消耗配置
+    "consumes": {
+        // 电力消耗：20单位/时间
+        "power": 6
+    },
+    // 建造所需材料清单
+    "requirements": [
+        {
+            "item": "lead",           // 铅
+            "amount": 360             // 数量：360个
+        },
+        {
+            "item": "痕迹合金",           // 蓝钢
+            "amount": 200             // 数量：230个
+        },
+        {
+            "item": "火钢",        // 钍
+            "amount": 230             // 数量：230个
+        },
+        {
+            "item": "silicon",        // 硅
+            "amount": 180             // 数量：180个
+        },
+        {
+            "item": "压缩铜",       // 钛
+            "amount": 135             // 数量：135个
+        },
+        {
+            "item": "sand",       // 钛
+            "amount": 135             // 数量：135个
+        },
+        {
+            "item": "伸金",    // 脉冲合金
+            "amount": 95              // 数量：95个
+        }
+    ],
+    // 所属类别：分配类（物品分配传输）
+    "category": "distribution",
+    // 解锁所需研究：质量驱动器研究项目
+    "research": "遗湿传送带"
+}

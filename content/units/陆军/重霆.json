@@ -1,0 +1,79 @@
+{
+  "type": "mech",
+  "name": "重霆",
+  "description": "T3陆军，不知道怎么用啊！！！！1"
+  "health": 3200,
+  // 是否始终解锁（true = 无需研究即可使用）
+    "alwaysUnlocked": true,
+    "research": "重金",  // 解锁该单位所需的研究项目
+  "armor": 8,
+  "speed": 0.5,
+  "flying": false,
+  "hover": false,
+  "hitSize": 18,
+  "itemCapacity": 40,
+  "weapons": [
+    {
+      "name": "重甲-加特林",
+      "reload": 3,
+      "x": -5,
+      "y": 1,
+      "ejectEffect": "casing1",
+      "bullet": {
+        "type": "BasicBulletType",
+        "damage": 45,
+        "speed": 7,
+        "width": 9,
+        "height": 14,
+        "lifetime": 40,
+        "shootEffect": "shootBig",
+        "smokeEffect": "shootBigSmoke",
+        "ammoMultiplier": 2,
+        "color": "FF3333FF"
+      }
+    },
+    {
+      "name": "重甲-导弹",
+      "reload": 90,
+      "x": 5,
+      "y": -2,
+      "shootSound": "missile",
+      "bullet": {
+        "type": "MissileBulletType",
+        "damage": 300,
+        "splashDamage": 150,
+        "splashDamageRadius": 40,
+        "speed": 4,
+        "lifetime": 60,
+        "width": 10,
+        "height": 15,
+        "frontColor": "FF9900FF",
+        "backColor": "FF5500FF",
+        "homingRange": 60,
+        "homingPower": 0.1,
+        "trailEffect": "missileTrail",
+        "shootEffect": "shootBig",
+        "hitEffect": "blastExplosion",
+        "smokeEffect": "shootBigSmoke"
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "type": "ForceFieldAbility",
+      "range": 40,
+      "max": 1200,
+      "reload": 15,
+      "cooldown": 180
+    },
+    {
+      "type": "RepairFieldAbility",
+      "range": 35,
+      "amount": 60,
+      "reload": 90
+    }
+  ],
+  "engineOffset": 9,
+  "engineSize": 4.5,
+  "engineColor": "FF6600FF"
+}

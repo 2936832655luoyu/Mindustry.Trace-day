@@ -1,0 +1,32 @@
+{
+    "type": "GenericCrafter",  // 建筑类型：通用制造机（基础制造类建筑定义）
+    "name": "制硅车间", 
+    "researchCostMultiplier": 0.2 // 建筑名称：压缩工厂
+    "category": "crafting",  // 所属类别：制造类（归类于制造相关建筑）
+    "description": "为了？？？，直接哒哒哒-----常青姐姐",  // 功能描述：压缩过程参数，其中-1可能为压缩阶段参数或占位符
+    "requirements": [  // 建造/解锁需求：建造该工厂所需的材料
+        "copper/50",  // 需要50单位铜
+        "lead/50"  // 需要50单位铅
+    ],
+    "outputItem": "silicon/2",  // 产出物品：每次制造产出4单位“翌蓝”
+    "craftTime": 40.00,  // 制造时间：每次制造耗时40单位时间（通常为秒）
+    "size": 2,  // 占地面积：建筑占用2x2的格子空间
+    "hasPower": false,  // 电力需求：需要电力才能运行
+    "hasLiquids": false,  // 液体需求：无需液体输入/输出
+    "drawer": {  // 渲染配置：建筑外观渲染相关设置
+        "type": "DrawDefault",  // 
+    },
+    "consumes": {  // 消耗配置：制造过程中的资源消耗
+        "items": {  // 物品消耗
+            "items": [
+                "sand/4"  // 每次制造消耗4单位  // 每次制造消耗4单位铅
+            ],
+            "items": [
+                "copper/2",
+                "sand/3"  // 每次制造消耗4单位  // 每次制造消耗4单位铅
+            ]
+        },
+    },
+    "alwaysUnlocked": false,  // 解锁状态：默认不解锁，需通过研究解锁
+   "research": "低热能亮室"
+}

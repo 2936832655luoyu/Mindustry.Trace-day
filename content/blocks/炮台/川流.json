@@ -1,0 +1,152 @@
+{
+    "type": "ItemTurret",
+    "name": "川流",
+    "description": "射击时出现神秘神秘，但是由于我们的技术限制，无法完全解析该炮台（此为削弱版）",
+    "size": 3
+    "researchCostMultiplier": 0.1
+    "health": 1220,
+    "ammoPerShot": 1,
+    "range": 470,  // 炮台射程固定为470
+    "reload": 3.5,
+    "inaccuracy": 2,
+    "ammoUseEffect": "casing1",
+    "rotateSpeed": 4,
+    "maxAmmo": 25,
+    "targetAir": true,
+    "targetGround": true,
+    "coolantMultiplier": 1.5,
+    "heatColor": "#FF6666",
+    "outlineColor": "#88DDFF33",
+   
+
+    "drawer": {
+        "type": "DrawTurret",
+        "parts": [
+            {
+                "type": "ShapePart",
+                "progress": "time",
+                "progressRange": [0, 1.5],
+                "circle": true,
+                "hollow": true,
+                "radius": 0,
+                "radiusTo": 14,
+                "color": "#99D1FF",
+                "alpha": 0,
+                "alphaTo": 0.5,
+                "alphaCurve": [0, 0.8, 0.4, 0],
+                "thickness": 3,
+                "layer": 100,
+                "smooth": true,
+                "y": -8,
+                "trigger": "shoot"
+            },
+            {
+                "type": "ShapePart",
+                "progress": "time",
+                "progressRange": [0.2, 1.2],
+                "circle": true,
+                "hollow": true,
+                "radius": 5,
+                "radiusTo": 9,
+                "radiusCurve": [0, 1, 0.6, 0],
+                "color": "#99D1FF",
+                "alpha": 0,
+                "alphaTo": 0.6,
+                "thickness": 2,
+                "layer": 98,
+                "smooth": true,
+                "y": -8,
+                "trigger": "shoot"
+            },
+            {
+                "type": "ShapePart",
+                "progress": "time",
+                "progressRange": [0.2, 0.8],
+                "line": true,
+                "x": 0,
+                "y": -8,
+                "length": 0,
+                "lengthTo": 8,
+                "thickness": 2,
+                "color": "#99D1FF",
+                "alpha": 0,
+                "alphaTo": 0.7,
+                "rotation": 0,
+                "layer": 102,
+                "smooth": true,
+                "trigger": "shoot"
+            },
+            {
+                "type": "ShapePart",
+                "progress": "time",
+                "progressRange": [0.2, 0.8],
+                "line": true,
+                "x": 0,
+                "y": -8,
+                "length": 0,
+                "lengthTo": 8,
+                "thickness": 2,
+                "color": "#99D1FF",
+                "alpha": 0,
+                "alphaTo": 0.7,
+                "rotation": 90,
+                "layer": 102,
+                "smooth": true,
+                "trigger": "shoot"
+            }
+        ]
+    },
+
+    "ammoTypes": {
+        "遗湿矿": { 
+            "pierceCap": 1,
+            "reloadMultiplier": 1,
+            "speed": 8,
+            "damage": 120,
+            "knockback": 0.3,
+            "lifetime": 59,  // 匹配射程：470/8≈58.75 → 向上取整为59
+            "width": 1,
+            "height": 6,
+            "ammoMultiplier": 1,
+            "lightColor": "#99D1FF",
+            "lightOpacity": 0.8
+        },
+        "火钢": { 
+            "pierceCap": 1,
+            "reloadMultiplier": 1,
+            "speed": 8,
+            "damage": 300,
+            "knockback": 0.3,
+            "lifetime": 59,  // 同上，确保飞行距离覆盖炮台射程
+            "width": 1,
+            "height": 6,
+            "ammoMultiplier": 1,
+            "lightColor": "#99D1FF",
+            "lightOpacity": 0.8
+        }
+    },
+
+    "requirements": [
+        {"item": "遗湿矿", "amount": 60},
+        {"item": "压缩铅", "amount": 30}
+    ],
+    "category": "turret",
+
+    "shootEffect": {
+        "type": "effect",
+        "effect": "shoot",
+        "scale": 0.9,
+        "color": "#99D1FF",
+        "sound": "shoot-small"
+    },
+    // 解锁条件：必须先占领"降落地"才能解锁当前区域
+    "research": {  // 该区域的解锁研究配置（通过完成前置目标解锁）
+        "parent": "奥冬",  // 研究树中的父节点（通常指前置区域的ID，此处为"groundZero"）
+        "objectives": [  // 解锁该区域需要完成的目标列表
+            {
+                "type": "SectorComplete",  // 目标类型：完成指定区块（占领指定扇区）
+                "preset": "峡谷"  // 具体目标：需要先完成（占领）"groundZero"区块
+            }
+        ]
+    }
+}

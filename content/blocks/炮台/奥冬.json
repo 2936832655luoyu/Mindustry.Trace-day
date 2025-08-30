@@ -1,0 +1,64 @@
+{
+    "type": "ItemTurret", 
+    "name": "奥冬", 
+    "description": "基础，使用压缩铜作为弹药，（这是一位刮痧师傅，可以当墙用）", 
+    "researchCostMultiplier": 0.1
+    "size": 2, 
+    "health": 2000, 
+    "ammoPerShot": 1, 
+    "range": 240, 
+    "reload": 8, 
+    "inaccuracy": 2, 
+    "ammoUseEffect": "casing1", 
+    "rotateSpeed": 4, 
+    "maxAmmo": 20, 
+    "targetAir": true, 
+    "targetGround": true, 
+    "coolantMultiplier": 1.5, 
+    "outlineColor": "#FF008833", 
+   
+    
+    "ammoTypes": {
+        "压缩铜": {
+            "pierceCap": 1,
+            "reloadMultiplier": 1,
+            "speed": 8,
+            "damage": 100,
+            "knockback": 0.3,
+            "lifetime": 30,  // 匹配射程：8×30=240（完全覆盖炮塔射程）
+            "width": 1,
+            "height": 7,
+            "ammoMultiplier": 1,
+            "shootEffect": "shootSmall",
+            "lightColor": "#FF5599",
+            "lightOpacity": 0.8,
+            "trailEffect": "colorSpark",
+            "trailColor": "#FF5599",
+            "trailLength": 6,
+            "trailWidth": 1.5,
+            "hitEffect": "hitBulletColor",
+            "hitColor": "#FF77BB"
+        },  // 修复缺少的逗号
+        "copper": { 
+            "pierceCap": 1, // 弹药可穿透的目标数量上限
+            "reloadMultiplier": 1, // 对 reload 时间的乘数（1 表示不改变 ）
+            "speed": 10, // 弹药飞行速度
+            "damage": 80, // 弹药造成的伤害
+            "knockback": 1, // 弹药的击退力
+            "lifetime": 24, // 匹配射程：10×24=240（完全覆盖炮塔射程）
+            "width": 1, // 弹药碰撞宽度
+            "height": 9, // 弹药碰撞高度
+            "ammoMultiplier": 2, // 弹药数量乘数（1 表示不改变 ）
+            "lightColor": "#87CEFA", // 弹药发光颜色
+            "lightOpacity": 10, // 弹药发光透明度（修复缺少的逗号）
+            "hitEffect": "hitBulletColor",
+            "hitColor": "#87CEFA"
+        }
+    },
+    "requirements": [
+        {"item": "copper", "amount": 30},
+        {"item": "lead", "amount": 20}
+    ],
+    "category": "turret",
+    "research": "燥热"
+}
