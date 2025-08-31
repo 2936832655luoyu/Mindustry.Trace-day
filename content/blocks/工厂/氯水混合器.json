@@ -31,8 +31,9 @@
     "buildCostMultiplier": 0.6,
     "category": "production", 
     "researchCostMultiplier": 0.03,
-    "research": "氯气处理技术",
+    "research": "氯气收集机",
     "activeSound": "bubbling",
     "activeSoundVolume": 1.2
 }
     
+
