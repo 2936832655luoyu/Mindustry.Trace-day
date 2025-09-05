@@ -5,44 +5,65 @@
     
     // 物理属性
     "hitSize": 5, // 碰撞箱大小（格）
-    "health": 1600, // 生命值
+    "health": 1400, // 生命值
     "armor": 8, // 护甲值（减少受到的伤害）
-    // 是否始终解锁（true = 无需研究即可使用）
+    
+    // 解锁与研究
     "alwaysUnlocked": true,
-    "research": "燥热",  // 解锁该单位所需的研究项目
+    "research": "简易制组厂", // 解锁该单位所需的研究项目
+    
     // 基本信息
     "name": "轻钢", // 单位名称
-    "description": "很基础的地面单位", // 单位描述
+    "description": "很基础的地面单位，配备左右手双武器", // 单位描述
     "type": "mech", // 单位类型：机甲
     
     // 物品携带
     "itemCapacity": 0, // 可携带物品数量（0表示不能携带物品）
     
-    // 研究需求
-    "research": "简易制组厂", // 需要在"特种陆军工厂"中研究解锁
-    
-    // 武器系统
+    // 武器系统（左右手双武器配置）
     "weapons": [
+        // 左手武器配置
         {
-            // 武器配置
-            "top": false, // 武器图层位置（false=底层，true=顶层）- 注意：此字段在标准JSON中可能无效
-            "name": "速射", // 武器名称
-            "reload": 1, // 装填时间（帧/发）
-            "x": -4, // 武器相对单位中心的X偏移（像素=1:4，即-4表示向左偏移16像素）
-            "y": 0.75, // 武器相对单位中心的Y偏移（向上偏移3像素）
+            "top": false,
+            "name": "左手速射", // 左手武器名称
+            "reload": 2, // 装填时间（帧/发）
+            "x": -4, // 左侧偏移（向左16像素）
+            "y": 0.75, // Y轴偏移（向上3像素）
             "ejectEffect": "casing1", // 抛壳特效
             
             // 子弹属性
             "bullet": {
-                "type": "BasicBulletType", // 子弹类型：基础子弹
-                "damage": 20, // 基础伤害
-                "speed": 5, // 子弹速度（格/帧）
-                "width": 5, // 子弹宽度（格）
-                "height": 12, // 子弹高度（格）
-                "lifetime": 30, // 子弹存在时间（帧）
-                "shootEffect": "shootSmall", // 射击特效
-                "smokeEffect": "shootSmallSmoke", // 烟雾特效
-                "ammoMultiplier": 1.5 // 弹药消耗倍率（使用1.5倍弹药）
+                "type": "BasicBulletType",
+                "damage": 20,
+                "speed": 5,
+                "width": 5,
+                "height": 12,
+                "lifetime": 30,
+                "shootEffect": "shootSmall",
+                "smokeEffect": "shootSmallSmoke",
+                "ammoMultiplier": 1.5
+            }
+        },
+        // 右手武器配置
+        {
+            "top": false,
+            "name": "右手速射", // 右手武器名称
+            "reload": 5, // 装填时间（帧/发）
+            "x": 4, // 右侧偏移（向右16像素）
+            "y": 0.75, // Y轴偏移（与左手保持一致）
+            "ejectEffect": "casing1", // 抛壳特效
+            
+            // 子弹属性
+            "bullet": {
+                "type": "BasicBulletType",
+                "damage": 20,
+                "speed": 5,
+                "width": 5,
+                "height": 12,
+                "lifetime": 30,
+                "shootEffect": "shootSmall",
+                "smokeEffect": "shootSmallSmoke",
+                "ammoMultiplier": 1.5
             }
         }
     ]
