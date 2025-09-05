@@ -16,7 +16,7 @@
 
 <span style="color: #2196F3;">### 🌐 语言支持与反馈</span>
 目前仅支持中文（英文党别急，等咱们凑齐人手就安排！）  
-- 反馈QQ群：<span style="color: #4CAF50;">[1040496356](XXXX)</span>（群消息会在周末集中回复，吐槽、建议都欢迎）
+- 反馈QQ群：<span style="color: #4CAF50;">[1040496356](https://qm.qq.com/q/bc1gdBPbEc)</span>（群消息会在周末集中回复，吐槽、建议都欢迎，复制链接或扫码即可加入）
 - 制作组QQ：<span style="color: #4CAF50;">2936832655</span>（添加后请耐心等周末回复，云意虽全天在线但大概率不回）
 
 <span style="color: #4CAF50;">### 🔍 招募公告</span>
@@ -26,7 +26,7 @@
 - <span style="color: #795548;">地图设计</span>：参与场景搭建、地形规划与地图逻辑优化（周末一起肝进度）
 - <span style="color: #00BCD4;">代码开发</span>：协助核心功能迭代、模块兼容调试（帮常青分担周末开发压力，别让云意一直摸鱼）
 
-只要你有热情、周末能抽时间，哪怕是新手也欢迎——咱们边做边学，总比一人“单打独斗”强！
+只要你有热情、周末能抽时间，哪怕是新手也欢迎——可加入反馈QQ群<span style="color: #4CAF50;">[1040496356](https://qm.qq.com/q/bc1gdBPbEc)</span>咨询，咱们边做边学，总比一人“单打独斗”强！
 
 <span style="color: #673AB7;">### 📅 后续计划</span>
 考虑到大家只有周末能参与（云意除外但他不干活），后续开发也主打“周末攻坚”，优先搞点“小目标”：
@@ -34,7 +34,7 @@
 2. 为后续“战役地图制作”“贴图重绘”攒基础素材与代码框架（周末慢慢囤货，等人手齐了再加速）
 
 <span style="color: #795548;">### 💡 开发者说明</span>
-模组代码开放共享，欢迎各位“抄作业”参考学习（支持“抄代码”）——反正咱们也不是啥“技术保密党”，周末也能一起交流技术～
+模组代码开放共享，欢迎各位“抄作业”参考学习（支持“抄代码”）——若有技术交流需求，可加入反馈QQ群<span style="color: #4CAF50;">[1040496356](https://qm.qq.com/q/bc1gdBPbEc)</span>，周末也能一起聊技术～
 
 
 # English Description
@@ -55,7 +55,7 @@ First, a quick heads-up: Most of the team are students, so they’re swamped wit
 
 <span style="color: #2196F3;">### 🌐 Language Support & Feedback</span>
 Only Chinese is supported for now (English speakers, hang in there — we’ll add English once we’ve got more hands on deck!)  
-- Feedback QQ Group: <span style="color: #4CAF50;">[1040496356](XXXX)</span> (Group messages will be replied to collectively on weekends; rants and suggestions are welcome)
+- Feedback QQ Group: <span style="color: #4CAF50;">[1040496356](https://qm.qq.com/q/bc1gdBPbEc)</span> (Group messages will be replied to collectively on weekends; rants and suggestions are welcome. Join via the link or QR code)
 - Production Team QQ: <span style="color: #4CAF50;">2936832655</span> (Please wait patiently for a weekend reply after adding; Yunyi’s online all day but will probably ignore you)
 
 <span style="color: #4CAF50;">### 🔍 Recruitment Announcement</span>
@@ -65,7 +65,7 @@ Desperately looking for "buddies" in these areas (if no one joins, Changqing’s
 - <span style="color: #795548;">Map Design</span>: Help with scene building, terrain planning & map logic optimization (work on progress together on weekends)
 - <span style="color: #00BCD4;">Code Development</span>: Assist with core feature updates & module compatibility debugging (ease Changqing’s weekend development pressure—don’t let Yunyi slack off forever)
 
-As long as you’re passionate and can spare time on weekends, even newbies are welcome — we’ll learn together. Way better than one person "fighting alone"!
+As long as you’re passionate and can spare time on weekends, even newbies are welcome — feel free to join the Feedback QQ Group <span style="color: #4CAF50;">[1040496356](https://qm.qq.com/q/bc1gdBPbEc)</span> for inquiries. We’ll learn together, which is way better than one person "fighting alone"!
 
 <span style="color: #673AB7;">### 📅 Future Plans</span>
 Since most of us can only participate on weekends (excluding Yunyi, who just won’t work), future development will focus on "weekend sprints" with small, achievable goals first:
@@ -73,4 +73,4 @@ Since most of us can only participate on weekends (excluding Yunyi, who just won
 2. Stock up on basic materials & code frameworks for future "campaign map production" and "texture redrawing" (slowly build up reserves on weekends, then speed up when more members are available)
 
 <span style="color: #795548;">### 💡 For Developers</span>
-This mod’s code is open-source — feel free to "copy our homework" and learn from it ("code referencing" is totally allowed)! We’re not "tech secret-hoarders", and we’re also happy to chat about tech on weekends～
+This mod’s code is open-source — feel free to "copy our homework" and learn from it ("code referencing" is totally allowed)! For technical communication needs, join the Feedback QQ Group <span style="color: #4CAF50;">[1040496356](https://qm.qq.com/q/bc1gdBPbEc)</span> — we can chat about tech together on weekends too～
