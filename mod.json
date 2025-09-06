@@ -3,11 +3,7 @@
   "displayName": "痕迹日",
   "author": "常青[代码编写]，云意[代码支持，代码编写]，火影3000无敌大王[绘图，贴图]，铭[地图]，纸归关[提出此模组的想法]",
   "version": "1.0.17",
-  "description": "痕迹日",
+  "description": "介绍日后再写",
   "minGameVersion": "149",
-  
-  // 新增音乐配置部分
-   "content": [
-    "content/music/custom-music.json"  // 注册音乐配置
-  ]
+  "repo": "2936832655luoyu/Mindustry.Trace-day"
 }
