@@ -34,7 +34,7 @@
             // 子弹属性
             "bullet": {
                 "type": "BasicBulletType",
-                "damage": 20,
+                "damage": 15,
                 "speed": 5,
                 "width": 5,
                 "height": 12,
@@ -56,7 +56,7 @@
             // 子弹属性
             "bullet": {
                 "type": "BasicBulletType",
-                "damage": 20,
+                "damage": 15,
                 "speed": 5,
                 "width": 5,
                 "height": 12,
