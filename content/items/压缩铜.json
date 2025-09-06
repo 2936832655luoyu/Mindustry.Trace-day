@@ -1,0 +1,10 @@
+{
+    "name": "压缩铜",
+    "description": "？？？",
+    "color": "#e44800", 
+    "radioactivity": 0,
+    "explosiveness": 0,
+    "flammability": 0,
+    "alwaysUnlocked": false,
+    "research": "遗湿矿"
+}

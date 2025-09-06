@@ -1,0 +1,113 @@
+{
+  "name": "恒温",  // 单位内部名称（代码中使用）
+  "displayName": "恒温",  // 单位显示名称（玩家界面中显示）
+  "description": "这是核心机啦",  // 单位简要描述
+  "details": "降降温，不要太热了",  // 单位详细说明
+
+  // 单位基础属性（核心机必开）
+  "coreUnitDock": true,  // 启用核心机停靠功能（核心机必备）
+  "mineSpeed": 10,  // 采矿速度
+  "mineTier": 2,  // 采矿等级（决定可采集的资源类型）
+  "buildSpeed": 2,  // 建造速度倍率
+  "speed": 5,  // 移动速度
+  "drag": 0.05,  // 移动阻力（值越小滑行越远）
+  "accel": 0.05,  // 加速度
+  "rotateSpeed": 5,  // 旋转速度
+  "health": 400,  // 生命值
+  "targetGround": true,  // 可攻击地面目标
+  "targetAir": true,  // 可攻击空中目标
+  "research": "燥热",  // 解锁该单位所需的前置研究
+
+  // 物理参数（碰撞、引擎偏移等）
+  "engineOffset": 8,  // 引擎位置偏移量
+  "engineSize": 3,  // 引擎视觉大小
+  "hitSize": 20,  // 碰撞体积大小（决定被攻击时的命中判定范围）
+
+  // 功能参数（载货、飞行等）
+  "type": "payload",  // 单位类型：载重单位（可运输资源/单位）
+  "payloadCapacity": 256,  // 运载单位容量
+  "range": 200,  // 攻击/作用范围
+  "ammoCapacity": 140,  // 弹药容量
+  "flying": true,  // 是否为飞行单位
+  "itemCapacity": 100,  // 物品（资源）携带容量
+
+  // 引擎配置（关键：补充粒子/拖尾特效）
+  "engines": [
+    {
+      "x": 0,  // 引擎X轴位置偏移
+      "y": -8,  // 引擎Y轴位置偏移
+      "radius": 3,  // 引擎基础半径
+      "rotation": 180,  // 引擎朝向（180度为向下喷射）
+      
+      // 引擎粒子特效（Mindustry 原生粒子写法）
+      "effect": {
+        "type": "particle",  // 特效类型：粒子效果
+        "color": "87ceeb",   // 粒子颜色（天蓝色）
+        "size": 2,           // 粒子大小
+        "amount": 8,         // 每次喷射的粒子数量
+        "lifetime": 40,      // 粒子存活时间（帧）
+        "speed": 1.2,        // 粒子喷射速度
+        "alphaMultiplier": 0.8 // 粒子透明度（0-1）
+      },
+      
+      // 引擎拖尾（用状态效果模拟持续拖尾）
+      "statusEffect": {
+        "type": "拖尾",  // 特效类型：拖尾
+        "color": "87ceeb",  // 拖尾颜色（天蓝色）
+        "length": 12,        // 拖尾段数（长度）
+        "fade": 0.05,        // 拖尾衰减速度
+        "spacing": 1.5       // 拖尾段之间的间距
+      }
+    }
+  ],
+
+  // 特殊能力（仅保留修复场）
+  "abilities": [
+    {
+      "type": "RepairFieldAbility",  // 能力类型：修复场
+      "range": 30,  // 修复范围
+      "amount": 40,  // 每次修复量
+      "reload": 120  // 修复间隔（帧）
+    }
+  ],
+
+  // 武器系统（保留子弹拖尾）
+  "weapons": [
+    {
+      "name": "水枪？",  // 武器名称
+      "x": 4,  // 武器X轴位置偏移
+      "y": 4.5,  // 武器Y轴位置偏移
+      "shootY": 4,  // 射击点Y轴偏移
+      "top": true,  // 武器是否显示在单位模型上方
+      "rotate": false,  // 武器是否随目标旋转
+      "reload": 5,  //  reload时间（帧）
+      "shootSound": "pew",  // 射击音效
+      "ejectEffect": "casing1",  // 弹壳/发射残留物特效
+      "inaccuracy": 0,  // 射击精度（0为完全精准）
+      "alternate": true,  // 是否交替射击（多武器时）
+      "ignoreRotation": false,  // 是否忽略单位旋转影响
+      "layerOffset": -0.01,  // 渲染层级偏移（控制显示前后关系）
+      
+      // 子弹配置
+      "bullet": {
+        "buildingDamageMultiplier": 0.01,  // 对建筑的伤害倍率（几乎不伤害建筑）
+        "speed": 6,  // 子弹速度
+        "lifetime": 50,  // 子弹生命周期（帧）
+        "damage": 30,  // 子弹伤害值
+        "width": 7,  // 子弹宽度
+        "shrinkY": 0,  // Y轴收缩比例（0为不收缩）
+        "height": 7,  // 子弹高度
+        
+        // 子弹拖尾特效（紫红渐变）
+        "trailEffect": {
+          "type": "trail",  // 特效类型：拖尾
+          "length": 10,  // 拖尾长度
+          "width": 3,  // 拖尾宽度
+          "colorFrom": "8a2be2",  // 拖尾起始颜色（紫色）
+          "colorTo": "ff6347",  // 拖尾结束颜色（红色）
+          "lifetime": 20  // 拖尾存在时间（帧）
+        }
+      }
+    }
+  ]
+}

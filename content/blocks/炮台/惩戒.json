@@ -1,0 +1,107 @@
+{
+    "type": "ItemTurret",  // 定义实体类型为物品炮塔
+    "name": "惩戒",  // 炮塔名称
+    "description": "4x4格前期防空炮台，可使用基础矿物作为弹药，沙子弹药可对地攻击",  // 炮塔功能描述
+    "researchCostMultiplier": 0.05,  // 研究成本乘数
+    
+    "details": "反馈联系方式qq：2936832655[这是代码组 感染 的，代码组 常青 无联系方式]",  // 额外细节信息，包含反馈联系方式
+    "health": 800,  // 炮塔生命值
+    "size": 4,  // 炮塔大小为4x4格
+    "reload": 3,  // 装填时间（帧）
+    "range": 250,  // 攻击范围
+    "maxAmmo": 30,  // 最大弹药容量
+    "recoilTime": 1,  // 后坐力持续时间
+    "recoil": 1.5,  // 后坐力大小
+    
+    "shoot": {  // 射击参数配置
+        "shots": 3,  // 每次射击发射的子弹数量
+        "shotDelay": 2  // 子弹之间的发射延迟（帧）
+    },
+    
+    "ammoPerShot": 1,  // 每次射击消耗的弹药数量
+    "shootSound": "shootlight",  // 射击音效
+    "targetGround": false,  // 默认不攻击地面目标
+    "targetAir": true,  // 默认攻击空中目标
+    "inaccuracy": 6,  // 射击 inaccuracy（精度误差）
+    "shake": 2,  // 射击时的屏幕震动强度
+    "shootCone": 30,  // 射击角度范围（度）
+    
+    "ammoTypes": {  // 支持的弹药类型配置
+        "copper": {  // 铜弹药配置
+            "item": "copper",  // 使用的物品
+            "type": "basicBulletType",  // 子弹类型
+            "reloadMultiplier": 1.2,  // 装填时间乘数
+            "damage": 12,  // 伤害值
+            "speed": 7,  // 子弹速度
+            "lifetime": 40,  // 子弹生命周期（帧）
+            "ammoMultiplier": 1  // 弹药效率乘数
+        },
+        "lead": {  // 铅弹药配置
+            "item": "lead",  // 使用的物品
+            "type": "basicBulletType",  // 子弹类型
+            "reloadMultiplier": 1,  // 装填时间乘数
+            "damage": 18,  // 伤害值
+            "speed": 6.5,  // 子弹速度
+            "lifetime": 40,  // 子弹生命周期（帧）
+            "ammoMultiplier": 1  // 弹药效率乘数
+        },
+        "压缩铜": {  // 压缩铜弹药配置
+            "item": "copper",  // 使用的物品
+            "type": "basicBulletType",  // 子弹类型
+            "reloadMultiplier": 1,  // 装填时间乘数
+            "damage": 25,  // 伤害值
+            "speed": 8,  // 子弹速度
+            "lifetime": 35,  // 子弹生命周期（帧）
+            "ammoMultiplier": 1,  // 弹药效率乘数
+            "pierce": true,  // 可以穿透目标
+            "pierceCap": 1  // 穿透上限（可穿透1个目标）
+        },
+        "压缩铅": {  // 压缩铅弹药配置
+            "item": "lead",  // 使用的物品
+            "type": "basicBulletType",  // 子弹类型
+            "reloadMultiplier": 1.1,  // 装填时间乘数
+            "damage": 32,  // 伤害值
+            "speed": 7.5,  // 子弹速度
+            "lifetime": 30,  // 子弹生命周期（帧）
+            "ammoMultiplier": 1,  // 弹药效率乘数
+            "knockback": 0.5  // 击退效果
+        },
+        "sand": {  // 沙子弹药配置
+            "item": "sand",  // 使用的物品
+            "type": "basicBulletType",  // 子弹类型
+            "reloadMultiplier": 1,  // 装填时间乘数
+            "damage": 15,  // 伤害值
+            "speed": 5.5,  // 子弹速度
+            "lifetime": 40,  // 子弹生命周期（帧）
+            "ammoMultiplier": 2,  // 弹药效率乘数
+            "targetGround": true  // 沙子弹药可以攻击地面目标
+        }
+    },
+    
+    "rotateSpeed": 15,  // 炮塔旋转速度
+    "requirements": [  // 建造所需材料
+        {"item": "copper", "amount": 100},  // 铜 100个
+        {"item": "lead", "amount": 80},  // 铅 80个
+        {"item": "sand", "amount": 50}  // 沙子 50个
+    ],
+    "category": "turret",  // 分类为炮塔
+    "research": "奥冬",  // 所需研究项目
+    
+    "drawer": {  // 绘图配置
+        "type": "DrawTurret",  // 炮塔绘图类型
+        "parts": [  // 绘图组件
+            {
+                "type": "ShapePart",  // 形状组件
+                "circle": true,  // 绘制圆形
+                "hollow": true,  // 空心圆
+                "radius": 5,  // 半径
+                "color": "#99D1FF",  // 颜色
+                "alpha": 0.8,  // 透明度
+                "thickness": 2,  // 线条粗细
+                "layer": 120,  // 绘制层级
+                "y": -6,  // Y轴偏移
+                "trigger": "shoot"  // 触发条件：射击时显示
+            }
+        ]
+    }
+}

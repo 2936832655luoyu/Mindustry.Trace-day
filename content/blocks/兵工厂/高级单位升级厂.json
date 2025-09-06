@@ -1,0 +1,56 @@
+{
+        "name": "高级单位升级厂", 
+        "researchCostMultiplier": 0.1,
+        "description": "把T2单位升级到T3，升级消耗更多，但是单位也越强\n[blue]云意出品必是精品", // 补充氯气消耗说明
+        "type": "Reconstructor",
+        "health": 800,
+        "size": 4,
+        "itemCapacity": 100,
+        "constructTime": 700,
+        
+        "consumes": {
+            "power": 8,
+            "items": {
+                "items": [
+                    { "item": "火钢", "amount": 100 },
+                    { "item": "精制火钢", "amount": 20 },
+                    { "item": "痕迹合金", "amount": 60 },
+                    { "item": "泥煤", "amount": 60 },
+                    { "item": "压缩铜", "amount": 100 },
+                    { "item": "压缩铅", "amount": 100 }
+                ]
+            },
+            "liquids": [ // 修改为数组形式，更符合Mindustry配置规范
+                {
+                    "liquid": "氯气",
+                    "amount": 1,
+                    "optional": false // 明确指定为非可选，必须消耗
+                }
+            ]
+        },
+        
+        "upgrades": [
+            ["重金","重霆"],
+            ["云驱","风云"]
+        ],
+        
+        "requirements": [
+            {"item": "火钢", "amount": 100},
+            {"item": "伸金", "amount": 100},
+            {"item": "痕迹合金", "amount": 50},
+            {"item": "压缩铜", "amount": 120},
+            {"item": "压缩铅", "amount": 120}
+        ],
+        
+        "category": "units",
+        "research": {
+            "parent": "基础升级厂",
+            "objectives": [
+                {
+                    "type": "SectorComplete",
+                    "preset": "峡谷"
+                }
+            ]
+        }
+    }
+    

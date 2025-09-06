@@ -1,0 +1,226 @@
+{
+    "type": "flying",
+    "name": "fengyun",
+    "localizedName": "风云",
+    "description": "T3重型制空单位，配备双等离子脉冲炮、尾部激光炮及追踪弹系统",
+    "category": "units",
+    "speed": 3.5,
+    "flying": true,
+    "turnCursor": true,
+    "research": "云驱",
+    "engineOffset": 1.2,
+    "engineSize": 2.5,
+    "engineColor": "7DF9FF",
+    "hitSize": 24,
+    "targetAir": true,
+    "targetGround": true,
+    "health": 4800,
+    "armor": 9,
+    "rotateSpeed": 2.6,
+    "itemCapacity": 0,
+    "commandLimit": 8,
+    "rotateShooting": false,
+    "abilities": [
+        {
+            "type": "ForceFieldAbility",
+            "radius": 40,
+            "regen": 1.5,
+            "max": 500,
+            "cooldown": 300
+        }
+    ],
+    "weapons": [
+        {
+            "name": "plasma-pulse-cannon-left",
+            "x": -8,
+            "y": 4,
+            "mirror": false,
+            "reload": 45,
+            "rotate": true,
+            "rotateSpeed": 3.2,
+            "shootEffect": {
+                "type": "ParticleEffect",
+                "particles": 15,
+                "color": "00FFFF",
+                "size": 3,
+                "lifetime": 20
+            },
+            "shootSound": "plasmaShootBig",
+            "bullet": {
+                "type": "PlasmaBulletType",
+                "damage": 32,
+                "explosionRadius": 16,
+                "explosionDamage": 18,
+                "frontColor": "00FFFF",
+                "backColor": "008B8B",
+                "width": 8,
+                "height": 12,
+                "speed": 7.5,
+                "lifetime": 60,
+                "pierce": true,
+                "pierceDamageFactor": 0.7,
+                "homingPower": 0.05,
+                "homingRange": 64,
+                "buildingDamageMultiplier": 1.2,
+                "hitEffect": {
+                    "type": "ExplosionEffect",
+                    "radius": 10,
+                    "particles": 20
+                }
+            }
+        },
+        {
+            "name": "plasma-pulse-cannon-right",
+            "x": 8,
+            "y": 4,
+            "mirror": false,
+            "reload": 45,
+            "rotate": true,
+            "rotateSpeed": 3.2,
+            "shootEffect": {
+                "type": "ParticleEffect",
+                "particles": 15,
+                "color": "00FFFF",
+                "size": 3,
+                "lifetime": 20
+            },
+            "shootSound": "plasmaShootBig",
+            "bullet": {
+                "type": "PlasmaBulletType",
+                "damage": 32,
+                "explosionRadius": 16,
+                "explosionDamage": 18,
+                "frontColor": "00FFFF",
+                "backColor": "008B8B",
+                "width": 8,
+                "height": 12,
+                "speed": 7.5,
+                "lifetime": 60,
+                "pierce": true,
+                "pierceDamageFactor": 0.7,
+                "homingPower": 0.05,
+                "homingRange": 64,
+                "buildingDamageMultiplier": 1.2,
+                "hitEffect": {
+                    "type": "ExplosionEffect",
+                    "radius": 10,
+                    "particles": 20
+                }
+            }
+        },
+        {
+            "name": "rear-laser-cannon",
+            "x": 0,
+            "y": -6,
+            "mirror": false,
+            "reload": 30,
+            "rotate": true,
+            "rotateSpeed": 4.0,
+            "shootEffect": {
+                "type": "ParticleEffect",
+                "particles": 10,
+                "color": "FF66FF",
+                "size": 2,
+                "lifetime": 15
+            },
+            "shootSound": "laserCharge",
+            "bullet": {
+                "type": "LaserBoltBulletType",
+                "damage": 25,
+                "splashRadius": 12,
+                "splashDamage": 12,
+                "frontColor": "FF66FF",
+                "backColor": "CC00CC",
+                "width": 6,
+                "height": 10,
+                "speed": 12,
+                "lifetime": 40,
+                "pierce": true,
+                "pierceDamageFactor": 0.8,
+                "homingPower": 0.03,
+                "homingRange": 48,
+                "buildingDamageMultiplier": 1.0,
+                "hitEffect": {
+                    "type": "WaveEffect",
+                    "radius": 8,
+                    "waves": 3,
+                    "color": "FF66FF"
+                }
+            }
+        },
+        {
+            "name": "homing-missile-launcher",
+            "x": 0,
+            "y": 0,
+            "mirror": false,
+            "reload": 10,
+            "rotate": true,
+            "rotateSpeed": 2.8,
+            "shootEffect": {
+                "type": "MultiEffect",
+                "effects": [
+                    {
+                        "type": "ParticleEffect",
+                        "particles": 20,
+                        "color": "FFD700",
+                        "size": 4,
+                        "lifetime": 25
+                    },
+                    {
+                        "type": "WaveEffect",
+                        "radius": 6,
+                        "waves": 2,
+                        "color": "FFA500"
+                    }
+                ]
+            },
+            "shootSound": "missileLaunch",
+            "bullet": {
+                "type": "HomingBulletType",
+                "damage": 100,
+                "speed": 6.5,
+                "lifetime": 120,
+                "homingPower": 0.15,
+                "homingRange": 120,
+                "frontColor": "FFD700",
+                "backColor": "FFA500",
+                "width": 10,
+                "height": 14,
+                "trailEffect": {
+                    "type": "ParticleEffect",
+                    "particles": 5,
+                    "color": "FFD700",
+                    "size": 2,
+                    "lifetime": 10
+                },
+                "hitEffect": {
+                    "type": "SeqEffect",
+                    "effects": [
+                        {
+                            "type": "ExplosionEffect",
+                            "radius": 12,
+                            "particles": 30
+                        },
+                        {
+                            "type": "RadialEffect",
+                            "radius": 15,
+                            "particles": 12,
+                            "color": "FFA500"
+                        }
+                    ]
+                },
+                "despawnEffect": {
+                    "type": "ExplosionEffect",
+                    "radius": 8,
+                    "particles": 15
+                },
+                "status": "入侵",
+                "statusDuration": 600,
+                "lightRadius": 20,
+                "lightOpacity": 0.9,
+                "shape": "plus",
+                "buildingDamageMultiplier": 0.9
+            }
+        }
+    ]
+}

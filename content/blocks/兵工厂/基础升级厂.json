@@ -1,0 +1,55 @@
+{
+        "name": "基础升级厂", 
+        "researchCostMultiplier": 0.1,
+        "description": "把简易单位升级的一遍，升级过程中需要消耗氯气作为氧化剂", // 补充氯气消耗说明
+        "type": "Reconstructor",
+        "health": 600,
+        "size": 3,
+        "itemCapacity": 80,
+        "constructTime": 600,
+        
+        "consumes": {
+            "power": 6,
+            "items": {
+                "items": [
+                    { "item": "火钢", "amount": 50 },
+                    { "item": "精制火钢", "amount": 5 },
+                    { "item": "痕迹合金", "amount": 50 },
+                    { "item": "伸金", "amount": 45 },
+                    { "item": "压缩铜", "amount": 30 },
+                    { "item": "压缩铅", "amount": 30 }
+                ]
+            },
+            "liquids": [ // 修改为数组形式，更符合Mindustry配置规范
+                {
+                    "liquid": "氯气",
+                    "amount": 0.5,
+                    "optional": false // 明确指定为非可选，必须消耗
+                }
+            ]
+        },
+        
+        "upgrades": [
+            ["轻钢", "重金"],
+            ["云陨", "云驱"]
+        ],
+        
+        "requirements": [
+            {"item": "火钢", "amount": 100},
+            {"item": "伸金", "amount": 100},
+            {"item": "压缩铜", "amount": 120},
+            {"item": "压缩铅", "amount": 120}
+        ],
+        
+        "category": "units",
+        "research": {
+            "parent": "简易制组厂",
+            "objectives": [
+                {
+                    "type": "SectorComplete",
+                    "preset": "峡谷"
+                }
+            ]
+        }
+    }
+    

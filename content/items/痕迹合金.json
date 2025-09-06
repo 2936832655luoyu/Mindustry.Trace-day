@@ -1,0 +1,12 @@
+{
+    "name": "痕迹合金",
+    "description": "？？？",
+    "details": "没开开，作者没有钱",
+    "hardness": 0.4,
+    "color": "3A4466FF",
+    "radioactivity": 1,
+    "explosiveness": 0.7,
+    "flammability": 0.1
+    "research":"伸金"//科技树位置，duo为双管
+}
+    

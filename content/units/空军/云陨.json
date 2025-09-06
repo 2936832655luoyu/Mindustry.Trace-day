@@ -1,0 +1,78 @@
+{
+    "type": "flying",  // 单位类型：飞行单位
+    "name": "云陨",  // 内部名称（英文小写，用于代码引用）
+    "localizedName": "云陨",  // 游戏内显示的本地化名称
+    "description": "基础空中单位，配备双联装机炮，用于侦察和轻型空战",  // 单位描述信息
+    "category": "units",  // 分类：单位类（用于在建造菜单中归类）
+    "speed": 4.5,  // 移动速度：保持原有机动性
+    "flying": true,  // 是否为飞行单位：true表示可以飞行
+    "turnCursor": false,  // 是否显示转向光标：false为不显示
+    "engineOffset": 0.9,  // 发动机位置偏移：增大偏移使引擎更靠后
+    "engineSize": 1.5,  // 发动机特效大小：增大至1.5增强视觉效果
+    "engineColor": "A0C8FF",  // 引擎颜色：添加浅蓝色引擎特效
+    "hitSize": 11,  // 碰撞体积大小：略微增大以匹配双炮口设计
+    "targetAir": true,  // 是否能攻击空中目标：true表示可以对空
+    "targetGround": true,  // 是否能攻击地面目标：false表示不能对地
+    "health": 55,  // 生命值：略微提升以匹配 slightly larger size
+    "armor": 1,  // 装甲值：保持T1单位标准
+    "mineSpeed": 0,  // 挖矿速度：0表示不能挖矿
+    "mineTier": 0,  // 挖矿等级：0表示没有挖矿能力
+    "buildSpeed": 0,  // 建造速度：0表示不能建造
+    "rotateSpeed": 4.0,  // 旋转速度：保持原有灵活性
+    "itemCapacity": 0,  // 物品携带容量：0表示不能携带物品
+    "commandLimit": 3,  // 指挥上限：最多可带领3个从属单位
+    "rotateShooting": false,  // 旋转射击：true表示可以转向目标射击
+ 
+    "weapons": [  // 武器配置列表：左右双炮口
+        {
+            "name": "light-air-cannon-left",  // 左炮口内部名称
+            "x": -3,  // 左炮口X轴位置：向左偏移
+            "y": 2,  // 武器Y轴位置
+            "mirror": false,  // 关闭镜像，使用手动对称配置
+            "reload": 18,  // 装填时间
+            "rotate": true,  // 武器是否可旋转
+            "rotateSpeed": 5.0,  // 武器旋转速度
+            "shootEffect": "shootSmall",  // 射击特效
+            "shootSound": "shoot",  // 射击音效
+            "bullet": {  // 子弹配置
+                "type": "BasicBulletType",
+                "damage": 8,  // 略微降低单发伤害以保持平衡
+                "frontColor": "FFD700",
+                "backColor": "FFA500",
+                "width": 3,
+                "height": 6,
+                "speed": 9,
+                "lifetime": 35,
+                "reloadTime": 18,
+                "buildingDamageMultiplier": 0.5,
+                "homingPower": 0.01,
+                "homingRange": 24
+            }
+        },
+        {
+            "name": "light-air-cannon-right",  // 右炮口内部名称
+            "x": 3,  // 右炮口X轴位置：向右偏移
+            "y": 2,  // 武器Y轴位置（与左炮口对齐）
+            "mirror": false,  // 关闭镜像
+            "reload": 18,  // 与左炮口同步装填
+            "rotate": true,
+            "rotateSpeed": 5.0,
+            "shootEffect": "shootSmall",
+            "shootSound": "shoot",
+            "bullet": {  // 与左炮口使用相同子弹配置
+                "type": "BasicBulletType",
+                "damage": 8,
+                "frontColor": "FFD700",
+                "backColor": "FFA500",
+                "width": 3,
+                "height": 6,
+                "speed": 9,
+                "lifetime": 35,
+                "reloadTime": 18,
+                "buildingDamageMultiplier": 0.5,
+                "homingPower": 0.01,
+                "homingRange": 24
+            }
+        }
+    ]
+}

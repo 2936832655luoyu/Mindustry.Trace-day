@@ -1,0 +1,12 @@
+{
+    "name": "遗湿矿",
+    "description": "痕迹星上的奇特矿石，富含有某种奇怪的能量，极其不稳定",
+    "details": "诶嘿，这个好像可以拿来吃",
+    "hardness": 1,
+    "color": "3A4466FF",
+    "radioactivity": 1,
+    "explosiveness": 1,
+    "flammability": 1
+    "research":"燥热"
+}
+    

@@ -1,0 +1,3 @@
+{"name": "大型强化铜墙","description": "大型强化铜墙，来恋铜？","type": "Wall","health": 5500,
+"researchCostMultiplier": 0.2
+"size": 2,"requirements": ["压缩铜/50"],"category": "defense","research": "强化铜墙"}

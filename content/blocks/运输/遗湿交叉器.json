@@ -1,0 +1,20 @@
+{
+   "type":"Junction",
+    "name":"遗湿交叉器",
+    "description": "交叉\n[red]感染你这都找不到回家种地吧"
+    "health":50,
+    "size":1,
+    	"itemCapacity": 24,//物品容量
+	"speed": 28,//运输速度
+	"displayedSpeed":11,//显示速度
+    "requirements": [
+        "遗湿矿/2",
+    ],
+    "category":"distribution"
+    	"research": {
+		"parent": "遗湿传送带",
+    "requirements":[
+        "遗湿矿/20",
+        ]
+	},
+}

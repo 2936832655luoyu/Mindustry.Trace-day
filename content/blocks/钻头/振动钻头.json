@@ -1,0 +1,34 @@
+{
+    "name": "振动钻头", 
+    "type": "Drill", 
+    "description": "强化后的砖头，对，就是钻头，还耐肘，但是这玩意需要水来保养......（为什么要我一个人写代码啊————感染）", 
+    "researchCostMultiplier": 0.2,
+    "size": 3, 
+    "health": 3000, 
+    "tier": 4, 
+    "drillTime": 200, 
+    "liquidBoostIntensity": 2, 
+    "canOverdrive": true, 
+    "warmupSpeed": 0.02, 
+    "drillEffect": "none", 
+    "updateEffect": "none", 
+    "rotateSpeed": 1.6, 
+    "drawMineItem": false, 
+    "consumes": { 
+        "liquid": { 
+            "liquid": "water", 
+            "amount": 0.35, 
+            "booster": true, 
+            "optional": false 
+        }
+    },
+    "itemCapacity": 20, 
+    "liquidCapacity": 10, 
+    "requirements": [
+        { "item": "遗湿矿", "amount": 250 },
+        { "item": "压缩铅", "amount": 250 },
+        { "item": "压缩铜", "amount": 600 }
+    ], 
+    "category": "production", 
+    "research": "风动钻头" 
+}

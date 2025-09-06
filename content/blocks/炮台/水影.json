@@ -1,0 +1,96 @@
+{
+    // 炮塔类型：液体炮塔
+    "type": "LiquidTurret",
+    // 炮塔名称：海关
+    "researchCostMultiplier": 0.06
+    "name": "水影",
+    // 炮塔描述：向敌人喷射液体流，使用水作弹药时能够自动灭火
+    "description": "向敌人喷射液体流，使用水作弹药时能够自动灭火",
+    // 炮塔生命值：2600
+    "health": 2600,
+    // 炮塔尺寸：4x4
+    "size": 3,
+    // 装填时间：0.1秒
+    "reload": 0.1,
+    // 后坐力：0.5
+    "recoil": 0.5,
+    // 攻击范围：400
+    "range": 400,
+    // 后坐力恢复时间：10
+    "recoilTime": 10,
+    // 可攻击地面目标
+    "targetGround": true,
+    // 可攻击空中目标
+    "targetAir": true,
+    // 射击精度偏差：4
+    "inaccuracy": 4,
+    // 炮塔旋转速度：3
+    "rotateSpeed": 3,
+    // 子弹速度随机性：0.1
+    "velocityRnd": "0.1",
+    // 液体容量：40
+    "liquidCapacity": 40,
+    
+    // 弹药类型定义
+    "ammoTypes": {
+        // 水弹药
+        "water": {
+            "type": "LiquidBulletType",
+            "liquid": "water",
+            "lifetime": 30,           // 子弹存在时间
+            "speed": 12,              // 子弹速度
+            "puddleSize": 6,          // 形成水坑大小
+            "orbSize": 4,             // 子弹视觉大小
+            "knockback": 1.5,         // 击退效果
+            "statusDuration": 360,    // 状态持续时间
+            "status": "wet",          // 施加状态：潮湿
+            "damage": 0.2             // 伤害值
+        },
+        // 油弹药
+        "oil": {
+            "type": "LiquidBulletType",
+            "liquid": "oil",
+            "lifetime": 36,
+            "speed": 10,
+            "puddleSize": 8,
+            "orbSize": 4,
+            "knockback": 1.3,
+            "statusDuration": 360,
+            "status": "tarred",       // 施加状态：焦油
+            "incendAmount": 1,        // 燃烧量
+            "incendSpread": 1,        // 燃烧传播
+            "incendChance": 1,        // 燃烧几率
+            "damage": 0.2
+        },
+                "氯水": {
+            "type": "LiquidBulletType",
+            "liquid": "氯水",
+            "lifetime": 40,
+            "speed": 11,
+            "puddleSize": 18,
+            "orbSize": 5,
+            "knockback": 1.4,
+            "statusDuration": 360,
+            "status": "入侵",       // 施加状态：焦油
+            "damage": 0.2
+        }
+
+    },
+    
+    // 建造所需资源
+    "requirements": [
+		{
+			"item": "伸金",
+			"amount": 20
+		},
+			{
+			"item": "遗湿矿",
+			"amount": 220
+		}
+    ],
+    
+    // 分类：炮塔
+    "category": "turret",
+    // 前置研究：海啸
+    "research": "川流"
+}
