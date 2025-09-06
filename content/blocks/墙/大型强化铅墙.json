@@ -1,3 +1,0 @@
-{"name": "大型强化铅墙","description": "大型强化铅墙。。。。。。。。。。。","type": "Wall","health": 5500,"size": 2,"requirements": ["压缩铅/50"],
-"researchCostMultiplier": 0.2
-"category": "defense","research": "强化铅墙"}
