@@ -1,7 +1,7 @@
 {
     "type": "flying",
     "name": "零度",
-    "description": "模拟死星核心机的短射程飞行单位，发射对空高爆弹，分裂小型破片造成近距离范围伤害",
+    "description": "在在在，发射对空高爆弹，分裂小型破片造成近距离范围伤害",
     "category": "unit",
 
     "speed": 3,
@@ -13,7 +13,7 @@
     "health": 1000,
     "armor": 0,
     "rotateSpeed": 5,
-
+    "research": "恒温",  // 解锁该单位所需的研究项目
     "ammoCapacity": 100,
     "mineSpeed": 2,
     "mineTier": 3,

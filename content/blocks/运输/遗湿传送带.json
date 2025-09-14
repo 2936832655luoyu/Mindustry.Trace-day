@@ -20,7 +20,12 @@
         // 可添加其他材料如：
         // {"item": "copper", "amount": 2}
     ],
-    
+    "soundMoving": {
+    "loop": true,  // 循环播放
+    "volume": 0.3, // 音量（0-1之间）
+    "pitch": 1.0,  // 音调
+    "sound": "glow"  // 音效名称（可使用内置音效或自定义音效ID）
+  },
     // 分类（distribution=物流类）
     "category": "distribution",
     

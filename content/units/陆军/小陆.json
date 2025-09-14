@@ -1,0 +1,263 @@
+{
+  // 单位内部名称（必须唯一）
+  "name": "小陆",
+  // 游戏内显示名称
+  "displayName": "小陆",
+  // 简短描述
+  "description": "超大型陆地战斗单位，装备有4门重型机枪和2个导弹发射系统。",
+  // 详细描述
+  "details": "这种巨型战争机器是阵营的终极武器，拥有厚重的装甲和毁灭性的火力。它的出现往往意味着战局的重大转变。",
+  
+  // 基础属性
+  "health": 15000,           // 生命值
+  "armor": 15,               // 护甲值（减少受到的伤害）
+  "speed": 0.4,              // 移动速度（格子/秒）
+  "hitSize": 27,             // 碰撞箱大小（像素）
+  "flying": false,           // 是否为飞行单位
+  "targetAir": true,         // 是否能攻击空中目标
+  "targetGround": true,      // 是否能攻击地面目标
+  "rotateSpeed": 1.5,        // 旋转速度（度/帧）
+  "accel": 0.05,             // 加速度
+  "drag": 0.1,               // 移动阻力
+  "range": 180,              // 最小攻击范围
+  "maxRange": 250,           // 最大攻击范围
+  
+  // 功能相关
+  "buildSpeed": -1,          // 建造速度（-1表示不能建造）
+  "mineTier": -1,            // 采矿等级（-1表示不能采矿）
+  "mineSpeed": 1,            // 采矿速度
+  "itemCapacity": 0,         // 物品容量
+  "ammoCapacity": 200,       // 弹药容量
+  "research": "重霆",  // 解锁该单位所需的研究项目
+  // 外观相关
+  "researchCostMultiplier": 500,     // 研究成本倍数
+  "alwaysCreateOutline": true,       // 总是创建轮廓
+  "outlineRadius": 4,                // 轮廓半径
+  "engineOffset": 12,                // 引擎偏移量
+  "engineSize": 4,                   // 引擎大小
+  
+  // 武器系统 - 4个机枪武器
+  "weapons": [
+    {
+      "name": "雷云",   // 武器名称
+      "x": 8, "y": 0,                    // 武器位置（相对单位中心）
+      "shootY": 2,                       // 发射点Y偏移
+      "reload": 8,                       // 重装时间（帧）
+      "recoil": 1.5,                     // 后坐力
+      "shootSound": "shoot",             // 射击音效
+      "rotate": true,                    // 是否旋转
+      "mirror": false,                   // 是否镜像
+      "top": false,                      // 是否在顶部绘制
+      "bullet": {                        // 子弹属性
+        "type": "BasicBulletType",       // 子弹类型
+        "damage": 50,                    // 伤害
+        "speed": 7,                      // 速度
+        "lifetime": 40,                  // 存在时间
+        "width": 7, "height": 9,         // 子弹大小
+        "shootEffect": "shootSmall",     // 射击特效
+        "smokeEffect": "shootSmallSmoke",// 烟雾特效
+        "ammoMultiplier": 1,             // 弹药消耗倍数
+        "splashDamage": 5,               // 溅射伤害
+        "splashDamageRadius": 15,        // 溅射半径
+        "frontColor": "FFA166",          // 前端颜色（橙色）
+        "backColor": "FF7722",           // 后端颜色（深橙色）
+        "status": "入侵",              // 添加入侵状态效果
+        "statusDuration": 300            // 状态持续时间（帧）
+      }
+    },
+    {
+      "name": "雷云",   // 第二个机枪（左侧）
+      "x": -8, "y": 0,                   // 对称位置
+      "shootY": 2,
+      "reload": 8,
+      "recoil": 1.5,
+      "shootSound": "shoot",
+      "rotate": true,
+      "mirror": false,
+      "top": false,
+      "bullet": {
+        "type": "BasicBulletType",
+        "damage": 50,
+        "speed": 7,
+        "lifetime": 40,
+        "width": 7, "height": 9,
+        "shootEffect": "shootSmall",
+        "smokeEffect": "shootSmallSmoke",
+        "ammoMultiplier": 1,
+        "splashDamage": 5,
+        "splashDamageRadius": 15,
+        "frontColor": "FFA166",
+        "backColor": "FF7722",
+        "status": "入侵",              // 添加入侵状态效果
+        "statusDuration": 300            // 状态持续时间（帧）
+      }
+    },
+    {
+      "name": "雷云",   // 第三个机枪（右前侧）
+      "x": 12, "y": -4,
+      "shootY": 2,
+      "reload": 10,                      // 稍慢的射速
+      "recoil": 1.2,                     // 较小的后坐力
+      "shootSound": "shoot",
+      "rotate": true,
+      "mirror": false,
+      "top": false,
+      "bullet": {
+        "type": "BasicBulletType",
+        "damage": 35,                    // 稍低的伤害
+        "speed": 7.5,                    // 稍快的速度
+        "lifetime": 35,                  // 稍短的存在时间
+        "width": 6, "height": 8,         // 稍小的子弹
+        "shootEffect": "shootSmall",
+        "smokeEffect": "shootSmallSmoke",
+        "ammoMultiplier": 1,
+        "frontColor": "FFA166",
+        "backColor": "FF7722",
+        "status": "入侵",              // 添加入侵状态效果
+        "statusDuration": 300            // 状态持续时间（帧）
+      }
+    },
+    {
+      "name": "雷云",   // 第四个机枪（左前侧）
+      "x": -12, "y": -4,                 // 对称位置
+      "shootY": 2,
+      "reload": 10,
+      "recoil": 1.2,
+      "shootSound": "shoot",
+      "rotate": true,
+      "mirror": false,
+      "top": false,
+      "bullet": {
+        "type": "BasicBulletType",
+        "damage": 35,
+        "speed": 7.5,
+        "lifetime": 35,
+        "width": 6, "height": 8,
+        "shootEffect": "shootSmall",
+        "smokeEffect": "shootSmallSmoke",
+        "ammoMultiplier": 1,
+        "frontColor": "FFA166",
+        "backColor": "FF7722",
+        "status": "入侵",              // 添加入侵状态效果
+        "statusDuration": 300            // 状态持续时间（帧）
+      }
+    },
+    
+    // 导弹武器系统 - 2个导弹发射器
+    {
+      "name": "雷雨",      // 第一个导弹发射器（右侧）
+      "x": 16, "y": 4,                   // 较远的位置
+      "shootY": 3,                       // 较高的发射点
+      "reload": 60,                      // 较长的重装时间
+      "recoil": 3,                       // 较大的后坐力
+      "shootSound": "launch",            // 发射音效
+      "rotate": true,
+      "mirror": false,
+      "top": false,
+      "bullet": {
+        "type": "MissileBulletType",     // 导弹类型
+        "damage": 100,                   // 高伤害
+        "speed": 3.5,                    // 较慢的速度
+        "lifetime": 120,                 // 较长的存在时间
+        "width": 10, "height": 12,       // 较大的导弹
+        "shootEffect": "shootBig",       // 大型射击特效
+        "smokeEffect": "shootBigSmoke",  // 大型烟雾特效
+        "ammoMultiplier": 4,             // 较高的弹药消耗
+        "splashDamage": 75,              // 溅射伤害
+        "splashDamageRadius": 40,        // 较大的溅射半径
+        "frontColor": "FF5555",          // 前端颜色（红色）
+        "backColor": "FF2222",           // 后端颜色（深红色）
+        "homingPower": 0.1,              // 追踪能力
+        "homingRange": 120,              // 追踪范围
+        "weaveScale": 8,                 // 飞行摆动幅度
+        "weaveMag": 1,                   // 飞行摆动频率
+        "status": "入侵",              // 添加入侵状态效果
+        "statusDuration": 450,           // 导弹的状态持续时间更长（450帧）
+        "applyEffect": {                 // 导弹的溅射效果也应用状态
+          "effect": "入侵",
+          "duration": 300,
+          "chance": 0.4                  // 溅射状态触发几率40%
+        }
+      }
+    },
+    {
+      "name": "雷雨",      // 第二个导弹发射器（左侧）
+      "x": -16, "y": 4,                  // 对称位置
+      "shootY": 3,
+      "reload": 60,
+      "recoil": 3,
+      "shootSound": "launch",
+      "rotate": true,
+      "mirror": false,
+      "top": false,
+      "bullet": {
+        "type": "MissileBulletType",
+        "damage": 100,
+        "speed": 3.5,
+        "lifetime": 120,
+        "width": 10, "height": 12,
+        "shootEffect": "shootBig",
+        "smokeEffect": "shootBigSmoke",
+        "ammoMultiplier": 4,
+        "splashDamage": 75,
+        "splashDamageRadius": 40,
+        "frontColor": "FF5555",
+        "backColor": "FF2222",
+        "homingPower": 0.1,
+        "homingRange": 120,
+        "weaveScale": 8,
+        "weaveMag": 1,
+        "status": "入侵",              // 添加入侵状态效果
+        "statusDuration": 450,           // 导弹的状态持续时间更长（450帧）
+        "applyEffect": {                 // 导弹的溅射效果也应用状态
+          "effect": "入侵",
+          "duration": 300,
+          "chance": 0.4                  // 溅射状态触发几率40%
+        }
+      }
+    }
+  ],
+  
+  // 特殊能力 - 添加护盾能力
+  "abilities": [
+    {
+      "type": "RegenAbility",    // 再生能力
+      "amount": 0.5              // 每秒恢复0.5生命值
+    },
+    {
+      "type": "ForceFieldAbility",  // 力场护盾能力
+      "shieldHealth": 5000,         // 护盾最大生命值
+      "regen": 15,                  // 护盾每秒恢复量
+      "max": 5000,                  // 护盾最大值
+      "cooldown": 120,              // 护盾被击破后的冷却时间（帧）
+      "radius": 40,                 // 护盾半径（覆盖整个单位）
+      "x": 0,                       // 护盾中心X偏移
+      "y": 0,                       // 护盾中心Y偏移
+      "color": "88AAFF"             // 护盾颜色（淡蓝色）
+    },
+    {
+      "type": "ShieldRegenFieldAbility",  // 护盾再生场能力
+      "amount": 2,                       // 每秒恢复护盾量
+      "reload": 60,                      // 恢复间隔
+      "range": 40,                       // 作用范围
+      "x": 0,                            // 位置X偏移
+      "y": 0                             // 位置Y偏移
+    }
+  ],
+  
+  // 免疫的状态效果
+  "immunities": [
+    "wet",       // 湿润效果（水中减速）
+    "tarred",    // 焦油效果（减速）
+    "freezing",  // 冰冻效果
+    "unmoving"   // 无法移动效果
+  ],
+  
+  // 视觉效果
+  "engineColor": "FFAA66",           // 引擎颜色（橙色）
+  "lightColor": "FF9955",            // 光照颜色（亮橙色）
+  "outlineColor": "5C5C5C",          // 轮廓颜色（深灰色）
+  "shieldColor": "88AAFF",           // 护盾颜色（淡蓝色）
+  "deathExplosionEffect": "massiveExplosion",  // 死亡爆炸特效
+  "deathSound": "explosionbig"       // 死亡音效（大爆炸声）
+}

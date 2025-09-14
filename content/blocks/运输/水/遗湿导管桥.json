@@ -1,0 +1,29 @@
+{
+    "type": "LiquidBridge",  // 建筑类型：液体导管桥，用于长距离传输液体
+    "name": "遗湿导管桥",  // 建筑在游戏中显示的名称
+    "description": "跨越更远的地形传输液体，可惜我们[代码组 常青和代码组 感染]要开学了",  // 功能说明：可跨越地形传输液体，依赖电力运行
+    "health": 220,  // 建筑生命值，承受伤害达到此值会被摧毁
+"researchCostMultiplier": 0.02
+    "range": 10,  // 液体传输的最大距离（单位：格）
+    "liquidCapacity": 20,  // 单次可传输的液体容量（单位：游戏内液体单位）
+    "conductivePower": true,  // 允许传导电力
+    "hasPower": true,         // 与电力系统相关
+    "consumesPower": false
+    "requirements": [  // 建造所需材料清单
+        {
+            "item": "遗湿矿",
+            "amount": 20  // 需要20个钲（自定义材料）
+        },
+        // 需要7个钛（简写格式）
+        {
+            "item": "lead",
+            "amount": 7  // 需要7个冲击合金
+        },
+        {
+            "item": "copper",
+            "amount": 7  // 需要7个相位布料
+        }
+    ],
+    "category": "liquid",  // 建筑分类：液体类，在液体处理设施栏显示
+    "research": "压力管道"  // 解锁所需前置研究：通用钢化玻璃导管
+}

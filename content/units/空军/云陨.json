@@ -22,7 +22,9 @@
     "itemCapacity": 0,  // 物品携带容量：0表示不能携带物品
     "commandLimit": 3,  // 指挥上限：最多可带领3个从属单位
     "rotateShooting": false,  // 旋转射击：true表示可以转向目标射击
- 
+ // 是否始终解锁（true = 无需研究即可使用）
+    "alwaysUnlocked": true,
+    "research": "轻钢",  // 解锁该单位所需的研究项目
     "weapons": [  // 武器配置列表：左右双炮口
         {
             "name": "light-air-cannon-left",  // 左炮口内部名称

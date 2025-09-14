@@ -4,7 +4,7 @@
         "description": "把T2单位升级到T3，升级消耗更多，但是单位也越强\n[blue]云意出品必是精品", // 补充氯气消耗说明
         "type": "Reconstructor",
         "health": 800,
-        "size": 4,
+        "size": 5,
         "itemCapacity": 100,
         "constructTime": 700,
         
